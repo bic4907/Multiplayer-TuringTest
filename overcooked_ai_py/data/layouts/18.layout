@@ -1,0 +1,19 @@
+{
+    "grid":  """XXXXXXXXXXXX
+                X  XX     OX
+                X1       O X
+                X    DD    X
+                X XX  P OOXX
+                XX  D  P  OX
+                X     P X XX
+                XX X      2X
+                X          X
+                XSX O   X  X
+                XX  XX   X X
+                XXXXXXXXXXXX""",
+    "start_bonus_orders": [],
+    "start_all_orders" : [
+        { "ingredients" : ["onion", "onion", "onion"]}
+    ],
+    "rew_shaping_params": {"PLACEMENT_IN_POT_REW" : 1, "DISH_PICKUP_REWARD" : 3, "SOUP_PICKUP_REWARD" : 5}
+}

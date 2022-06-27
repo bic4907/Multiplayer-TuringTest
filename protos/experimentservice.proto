@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package grpc;
+
+message Empty {}
+
+message State {
+    uint32 command = 1;
+    string payload = 2;
+}
+
+message GameSync {
+    bytes screen = 1;
+    string time_limit = 2;
+    string elapsed_time = 3;
+}
+
+
+service ExperimentService {
+    rpc ServerSignal (Empty) returns (stream State);
+    rpc GameSyncSignal (stream GameSync) returns (Empty);
+    rpc HealthCheck (Empty) returns (Empty);
+}
